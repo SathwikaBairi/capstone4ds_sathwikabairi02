@@ -1,152 +1,130 @@
----
-title: "Writing a great story for data science projects - spring 2025"
-subtitle: "This is a Report Template Quarto"
-author: "Students names (Advisor: Dr. Cohen)"
-date: '`r Sys.Date()`'
-format:
-  html:
-    code-fold: true
-course: Capstone Projects in Data Science
-bibliography: references.bib # file contains bibtex for references
-#always_allow_html: true # this allows to get PDF with HTML features
-self-contained: true
-execute: 
-  warning: false
-  message: false
-editor: 
-  markdown: 
-    wrap: 72
----
+# LITERATURE REVIEW
 
-Slides: [slides.html](slides.html){target="_blank"} ( Go to `slides.qmd`
-to edit)
+## ANALYTICS USING MACHINE LEARNING AND BAYES INFERENCE
 
-::: callout-important
-**Remember:** Your goal is to make your audience understand and care
-about your findings. By crafting a compelling story, you can effectively
-communicate the value of your data science project.
+### BACKGROUND / MOTIVATION :
 
-Carefully read this template since it has instructions and tips to
-writing!
-:::
+#### CONTEXT
 
-## Introduction
+Predictive analytics has become one of the cornerstone domains of data science, particularly in applications like business intelligence, finance, and dynamic pricing. Businesses rely on forecasting models in optimizing pricing strategies, product-level inventory control, market movements, and improvement in decision-making processes. Traditional time-series forecasting models, like ARIMA and Holt-Winters, thrive on stationary data, which can sometimes be very tedious for their implementation when working with non-linear, high-dimensional, and complex datasets. The research will narrow this gap by employing machine learning techniques, reinforcement learning, and Bayesian inference in order to enhance predictive accuracy.
 
-The introduction should:
+#### PROBLEM OR GAP IN THE EXISTING LITERATURE
 
--   Develop a storyline that captures attention and maintains interest.
+Not only do time-series models provide a starting point for forecasting, but the statistical models for such time-series forecasting have certain drawbacks:
 
--   Your audience is your peers
+-   Assumption of Linearity : There are several models that are linear that establish the relationship between a number of variables. However, these often have very little intricacy to them.
 
--   Clearly state the problem or question you're addressing.
+-   Limited Handling of Non-Stationarity : Certain data in the world such as financial and sales data have a number of trends and seasonality. Thus, most of those data are usually non-stationary.
 
-<!-- -->
+-   Inability to Capture Uncertainty : Most classical point of statistical does not have a prediction that factors uncertainty.
 
--   Introduce why it is relevant needs.
+As is, classical statistical point estimation models are often inadequate for capturing uncertainty. Ensemble methods and deep learning techniques can, however, capture uncertainty robustly. Nonetheless, a coherent approach towards such and model accuracy or interpretability is still not there.
 
--   Provide an overview of your approach.
+#### SIGNIFICANCE OF RESEARCH QUESTION
 
-Example of writing including citing references:
+The main goal of this study is: How can machine learning, Bayesian inference, and reinforcement learning change the accuracy and reliability of predictive analytics for sales forecasting, financial modeling and pricing optimization? This question is relevant because:
 
-*This is an introduction to ..... regression, which is a non-parametric
-estimator that estimates the conditional expectation of two variables
-which is random. The goal of a kernel regression is to discover the
-non-linear relationship between two random variables. To discover the
-non-linear relationship, kernel estimator or kernel smoothing is the
-main method to estimate the curve for non-parametric statistics. In
-kernel estimator, weight function is known as kernel function
-[@efr2008]. Cite this paper [@bro2014principal]. The GEE [@wang2014].
-The PCA [@daffertshofer2004pca]*. Topology can be used in machine learning [@adams2021topology]
+1.  Data based decision making is growing rapidly; thus accurate forecasting is vital for business competition.
+2.  Models are needed that account for uncertainty because financial markets are unstable.
+3.  Retailers need to adapt to dynamic changes in demand with their pricing policies.
+4.  A coherent synthesis of several forecasting paradigms is yet to be developed.
 
-*This is my work and I want to add more work...*
+The objective of the research is to design a hybrid framework integrating supervised learning, probabilistic modeling, and reinforcement learning for overcoming these issues.
 
-## Methods
+### METHODS USED
 
--   Detail the models or algorithms used.
+#### METHODS AND USES
 
--   Justify your choices based on the problem and data.
+The study employs machine learning, Bayesian inference, and reinforcement learning techniques to handle non-linearity, uncertainty, and dynamic decision-making, focusing on their ability to handle non-linearity. 1. SUPERVISED LEARNING FOR TIME-FORECASTING :
 
-*The common non-parametric regression model is*
-$Y_i = m(X_i) + \varepsilon_i$*, where* $Y_i$ *can be defined as the sum
-of the regression function value* $m(x)$ *for* $X_i$*. Here* $m(x)$ *is
-unknown and* $\varepsilon_i$ *some errors. With the help of this
-definition, we can create the estimation for local averaging i.e.*
-$m(x)$ *can be estimated with the product of* $Y_i$ *average and* $X_i$
-*is near to* $x$*. In other words, this means that we are discovering
-the line through the data points with the help of surrounding data
-points. The estimation formula is printed below [@R-base]:*
+The model performs out of sample validation to check its generalization performance. It implements Random Forest, LASSO Regression, and Gradient Boosting models, employing lag features for temporal dependencies alongside one-hot encoding for categorical variables.
 
-$$
-M_n(x) = \sum_{i=1}^{n} W_n (X_i) Y_i  \tag{1}
-$$$W_n(x)$ *is the sum of weights that belongs to all real numbers.
-Weights are positive numbers and small if* $X_i$ *is far from* $x$*.*
+2.  BAYES INFERENCE:
 
+Bayesian regression models are applied for the estimation of confidence intervals of the predictions, while for forecasting of financial markets and Covid-19 impacts, probabilistic modeling is employed.
 
-*Another equation:*
+![](images/3.jpeg){fig-align="center" width="600"}
 
-$$
-y_i = \beta_0 + \beta_1 X_1 +\varepsilon_i
-$$
+As the picture shows, the probability is calculated interms as
 
-## Analysis and Results
+$$ \[\log(\text{Sales}) \sim \mathcal{N}(\mu_{\text{Sales}}, \sigma^2)\] $$
 
-### Data Exploration and Visualization
+$$ 
+\mu = \alpha + \sum_{i} \beta_ix_i
+ $$
 
--   Describe your data sources and collection process.
+![](images/2.jpeg){fig-align="center" width="600"}
 
--   Present initial findings and insights through visualizations.
+we will also be using mean and covariates for the analysis;
 
--   Highlight unexpected patterns or anomalies.
+covariate :
 
-A study was conducted to determine how...
+$$ \( z_i = \frac{x_i - \mu_i}{\sigma_i} \) $$
 
-```{r, warning=FALSE, echo=T, message=FALSE}
-# loading packages 
-library(tidyverse)
-library(knitr)
-library(ggthemes)
-library(ggrepel)
-library(dslabs)
-```
+mean :
 
-```{r, warning=FALSE, echo=TRUE}
-# Load Data
-kable(head(murders))
+$$ \( v_i = \frac{\sigma_i}{\mu_i} \) $$
 
-ggplot1 = murders %>% ggplot(mapping = aes(x=population/10^6, y=total)) 
+3.  SENTIMENT ANALYSIS FOR MARKET PREDICTIONS
 
-  ggplot1 + geom_point(aes(col=region), size = 4) +
-  geom_text_repel(aes(label=abb)) +
-  scale_x_log10() +
-  scale_y_log10() +
-  geom_smooth(formula = "y~x", method=lm,se = F)+
-  xlab("Populations in millions (log10 scale)") + 
-  ylab("Total number of murders (log10 scale)") +
-  ggtitle("US Gun Murders in 2010") +
-  scale_color_discrete(name = "Region")+
-      theme_bw()
-  
+Comprising sentiment analysis and keyword frequency time-series models, Twitter data is analyzed in tandem with graph mining techniques to determine salient communities impacting stock market trends.
 
-```
+$$ y_t = \alpha + k \sum_{i=1}^{\beta_j} Y_{t-1} + k \sum_{j} \lambda_j X_{t-j} + \epsilon_t $$
 
-### Modeling and Results
+If the p-value is less than 0.05, we could reject the null hypothesis and conclude that variable X (sentiment) influences stock market changes and volatility. Granger's test provides insights into how much predictive information one signal has about another one over a given lagged period. Here the p-value measures the statistical significance of the causality between two variables
 
--   Explain your data preprocessing and cleaning steps.
+#### example data visualisation for data predicted vs target
 
--   Present your key findings in a clear and concise manner.
+![](images/3.jpeg){width="600"}
 
--   Use visuals to support your claims.
+#### TECHNIQUES AND APPROACHES
 
--   **Tell a story about what the data reveals.**
+The approaches implemented in predictive analytics help begin to resolve various problems. Supervised learning helps to include historical dependencies in a pattern framework making them effective in the prediction of structured data. Stacking productionizes some of the individual biases and improves prediction performance by combining diverse algorithms. Bayesian inference reflects uncertainty, increasing model’s resilience to variations in distribution of data and unseen scenarios. Reinforcement learning provides adaptive pricing and real-time decision making suitable for automated trading and personalized recommendations. Sentiment analysis draws insights into public perception, augmenting traditional data-driven models. The integrative apply of these methodologies ensures a well-rounded and reflexive density of thought in which a proper equilibrium is created between accuracy, interpretability, and adaptability in vastly complex real-world crowds.
 
-```{r}
+### SIGNIFICANCE OF THE WORK
 
-```
+#### KEY FINDINGS AND CONTRIBUTIONS
 
-### Conclusion
+-   The study highlights the importance of ensemble learning in improving forecasting accuracy by combining multiple models to reduce variance and bias.
+-   It introduces Bayesian inference to quantify prediction uncertainty, providing robust probabilistic estimates for financial risk assessment and decision-making under uncertainty.
+-   Reinforcement learning is applied to dynamic pricing, showcasing AI-driven decision-making that adapts to market conditions and optimizes revenue in real time.
+-   The study also highlights the potential of social media data in financial forecasting, demonstrating how sentiment analysis and real-time trends can enhance predictive models.
+-   The study proposes a stacking model framework for flexible and scalable predictive modeling across various industries, ensuring interpretability of machine learning models and evaluating computational efficiency and scalability.
 
--   Summarize your key findings.
+These contributions advance predictive analytics by improving accuracy, reliability, and applicability across multiple domains.
 
--   Discuss the implications of your results.
+#### IMPLICATIONS AND BROADER CONTEXT
 
-## References
+The researchers argue that by integrating estimates of uncertainty into existing procedures for demand forecasting, firms can achieve reduced stock-holding costs and increased enhancements for risk models. A retailer may then adopt such price strategies as may be optimal based on an evaluation of real-time prevailing market conditions. Positive social media sentiment can augment predictions about the stock market. These models can help different governments understand economic trends and predict crises. Such an application could include resource allocation forecasting and risk mitigation within healthcare and supply chain sectors. Their paper highlights the importance of integrating diverse data sources into predictive models to enhance forecasting accuracy.
+
+### WORK CONNECTIONS
+
+#### PAPAER RELEVANCE AND HOW IT IS DIFFER FROM PREVIOUS WORKS
+
+The study combines different research domains to augment predictive analytics. It combines Breiman's Random Forests and Friedman's Gradient Boosting Machines to improve model efficiency and robustness while responding to complicated datasets. It uses Bayesian regression techniques of Gelman and Kruschke to elicit uncertainty of the prediction intervals to achieve a more systematic thinking. Reinforcement learning techniques are used to learn optimal decision strategies in uncertain environments, such as pricing tactics. Sentiment analysis frameworks from the financial forecasting literature are employed to model the effect of market sentiment on financial forecasting. The study builds on these by extending the applicability of alternative data sources such as satellite imagery, transaction data, and signals from social media. This provides a more integrated and detailed perspective of predictive modeling that informs decisions across varying fields. It shows the flexibility and effectiveness of these methods in forecasting market trends and sentiment shifts. Overall, it is contributing towards the way forward in developmental predictive analytics and decision-making approaches.
+
+#### NEW CONTRIBUTIONS
+
+This research consolidates a variety of techniques of predictive analytics into an integrated framework complemented by Bayesian inference for ensemble learning, reinforcement learning for dynamic pricing, by integrating social media signals as predictive features, and by investigating hybrid modeling approaches. This offers a practical, flexible solution for various industries: healthcare analytics, climate modeling, and supply forecasting, thereby filling gaps in the existing literature.
+
+### MY PROJECT RELEVANCE
+
+The capstone project focuses on Machine Learning and Predictive Analytics, aiming to develop models to predict outcomes based on historical data. Techniques include
+
+Capstone project on machine learning and predictive analytics
+
+-   Stack methods for improving prediction accuracy;
+-   Quantify the uncertainty in predictions with Bayesian regression;
+-   Modify reinforcement learning algorithm for real-time predictive decision-making;
+-   Run sentiment analysis to improve the model.
+
+Application Areas: - Financial forecasting: Improvement in prediction accuracy; - Sales data: Policy based on pricing strategies; - Healthcare/Supply Chain Analytics: Improvement in forecasting accuracy; - Macroeconomic indicators: Sharper predictive insights.
+
+Future Work: - A deep exploration of Transformer-based architecture; - Explainable AI methods for improving model transparency; - Causal inference would be included to get insights into relationships between key predictive factors.
+
+### REFERENCES
+
+1.  B. M. Pavlyshenko, “Machine-learning models for sales time series forecasting,” Data, vol. 4, no. 1, p. 15, 2019.
+2.  B. M. Pavlyshenko, “Linear, machine learning and probabilistic approaches for time series analysis,” in 2016 IEEE First International Conference on Data Stream Mining & Processing (DSMP), pp. 377–381, IEEE, 2016. \# https://arxiv.org/pdf/2205.12905
+
+#### NAME : SATHWIKA BAIRI
