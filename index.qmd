@@ -6,6 +6,7 @@
 
 #### CONTEXT
 
+
 Predictive analytics has become one of the cornerstone domains of data science, particularly in applications like business intelligence, finance, and dynamic pricing. Businesses rely on forecasting models in optimizing pricing strategies, product-level inventory control, market movements, and improvement in decision-making processes. Traditional time-series forecasting models, like ARIMA and Holt-Winters, thrive on stationary data, which can sometimes be very tedious for their implementation when working with non-linear, high-dimensional, and complex datasets. The research will narrow this gap by employing machine learning techniques, reinforcement learning, and Bayesian inference in order to enhance predictive accuracy.
 
 #### PROBLEM OR GAP IN THE EXISTING LITERATURE
