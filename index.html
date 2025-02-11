@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>LITERATURE REVIEW</title>
+<title>index</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -34,35 +34,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -72,152 +43,57 @@ window.Quarto = {
 
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">LITERATURE REVIEW</h1>
-</div>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="analytics-using-machine-learning-and-bayes-inference" class="level2">
-<h2 class="anchored" data-anchor-id="analytics-using-machine-learning-and-bayes-inference">ANALYTICS USING MACHINE LEARNING AND BAYES INFERENCE</h2>
-<section id="background-motivation" class="level3">
-<h3 class="anchored" data-anchor-id="background-motivation">BACKGROUND / MOTIVATION :</h3>
-<section id="context" class="level4">
-<h4 class="anchored" data-anchor-id="context">CONTEXT</h4>
-<p>Predictive analytics has become one of the cornerstone domains of data science, particularly in applications like business intelligence, finance, and dynamic pricing. Businesses rely on forecasting models in optimizing pricing strategies, product-level inventory control, market movements, and improvement in decision-making processes. Traditional time-series forecasting models, like ARIMA and Holt-Winters, thrive on stationary data, which can sometimes be very tedious for their implementation when working with non-linear, high-dimensional, and complex datasets. The research will narrow this gap by employing machine learning techniques, reinforcement learning, and Bayesian inference in order to enhance predictive accuracy.</p>
+<section id="capstone-project-proposal" class="level1">
+<h1>CAPSTONE PROJECT PROPOSAL</h1>
+<section id="names-of-your-teammates-if-any-or-specify-if-you-are-working-independently." class="level4">
+<h4 class="anchored" data-anchor-id="names-of-your-teammates-if-any-or-specify-if-you-are-working-independently.">Names of your teammates, if any, or specify if you are working independently.</h4>
+<p>Myself Sathwika Bairi, and my teammates are Srujan Bommena, Yashwanth krishna</p>
 </section>
-<section id="problem-or-gap-in-the-existing-literature" class="level4">
-<h4 class="anchored" data-anchor-id="problem-or-gap-in-the-existing-literature">PROBLEM OR GAP IN THE EXISTING LITERATURE</h4>
-<p>Not only do time-series models provide a starting point for forecasting, but the statistical models for such time-series forecasting have certain drawbacks:</p>
-<ul>
-<li><p>Assumption of Linearity : There are several models that are linear that establish the relationship between a number of variables. However, these often have very little intricacy to them.</p></li>
-<li><p>Limited Handling of Non-Stationarity : Certain data in the world such as financial and sales data have a number of trends and seasonality. Thus, most of those data are usually non-stationary.</p></li>
-<li><p>Inability to Capture Uncertainty : Most classical point of statistical does not have a prediction that factors uncertainty.</p></li>
-</ul>
-<p>As is, classical statistical point estimation models are often inadequate for capturing uncertainty. Ensemble methods and deep learning techniques can, however, capture uncertainty robustly. Nonetheless, a coherent approach towards such and model accuracy or interpretability is still not there.</p>
+<section id="research-topic-you-will-focus-on-for-the-remainder-of-the-semester" class="level4">
+<h4 class="anchored" data-anchor-id="research-topic-you-will-focus-on-for-the-remainder-of-the-semester">Research topic you will focus on for the remainder of the semester</h4>
+<p>Machine Learning and Predictive Analytics: Developing models to predict outcomes based on historical data.</p>
 </section>
-<section id="significance-of-research-question" class="level4">
-<h4 class="anchored" data-anchor-id="significance-of-research-question">SIGNIFICANCE OF RESEARCH QUESTION</h4>
-<p>The main goal of this study is: How can machine learning, Bayesian inference, and reinforcement learning change the accuracy and reliability of predictive analytics for sales forecasting, financial modeling and pricing optimization? This question is relevant because:</p>
-<ol type="1">
-<li>Data based decision making is growing rapidly; thus accurate forecasting is vital for business competition.</li>
-<li>Models are needed that account for uncertainty because financial markets are unstable.</li>
-<li>Retailers need to adapt to dynamic changes in demand with their pricing policies.</li>
-<li>A coherent synthesis of several forecasting paradigms is yet to be developed.</li>
-</ol>
-<p>The objective of the research is to design a hybrid framework integrating supervised learning, probabilistic modeling, and reinforcement learning for overcoming these issues.</p>
+<section id="mathematicalstatistical-methods-you-plan-to-use-in-the-capstone" class="level4">
+<h4 class="anchored" data-anchor-id="mathematicalstatistical-methods-you-plan-to-use-in-the-capstone">Mathematical/Statistical methods you plan to use in the capstone</h4>
+<section id="regression-models" class="level5">
+<h5 class="anchored" data-anchor-id="regression-models">REGRESSION MODELS:</h5>
+<p>Linear Regression: Model relationships between dependent and independent variables.</p>
+<p>Multiple Regression: Extends linear regression with multiple independent variables.</p>
+<p>Logistic Regression: Used for binary classification problems (e.g., fraud detection).</p>
+</section>
+<section id="unsupervised" class="level5">
+<h5 class="anchored" data-anchor-id="unsupervised">UNSUPERVISED :</h5>
+<p>k-Means Clustering: Groups data into k clusters based on distance metrics.</p>
+<p>Principal Component Analysis (PCA): Dimensionality reduction technique using eigenvalues and eigen vectors.</p>
+<p>Auto-encoders: Deep learning models for feature extraction.</p>
+<p>PROBABILISTIC MODELS Bayesian Inference: Updates probabilities as new evidence is<br>
+introduced.</p>
+<p>Hidden Markov Models (HMM): Used in sequence prediction (e.g., speech recognition).</p>
+<p>Gaussian Mixture Models (GMM): Clustering approach based on probability distributions</p>
 </section>
 </section>
-<section id="methods-used" class="level3">
-<h3 class="anchored" data-anchor-id="methods-used">METHODS USED</h3>
-<section id="methods-and-uses" class="level4">
-<h4 class="anchored" data-anchor-id="methods-and-uses">METHODS AND USES</h4>
-<p>The study employs machine learning, Bayesian inference, and reinforcement learning techniques to handle non-linearity, uncertainty, and dynamic decision-making, focusing on their ability to handle non-linearity. 1. SUPERVISED LEARNING FOR TIME-FORECASTING :</p>
-<p>The model performs out of sample validation to check its generalization performance. It implements Random Forest, LASSO Regression, and Gradient Boosting models, employing lag features for temporal dependencies alongside one-hot encoding for categorical variables.</p>
-<ol start="2" type="1">
-<li>BAYES INFERENCE:</li>
-</ol>
-<p>Bayesian regression models are applied for the estimation of confidence intervals of the predictions, while for forecasting of financial markets and Covid-19 impacts, probabilistic modeling is employed.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/3.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
-</figure>
-</div>
-<p>As the picture shows, the probability is calculated interms as</p>
-<p><span class="math display">\[ \[\log(\text{Sales}) \sim \mathcal{N}(\mu_{\text{Sales}}, \sigma^2)\] \]</span></p>
-<p><span class="math display">\[
-\mu = \alpha + \sum_{i} \beta_ix_i
-\]</span></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/2.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
-</figure>
-</div>
-<p>we will also be using mean and covariates for the analysis;</p>
-<p>covariate :</p>
-<p><span class="math display">\[ \( z_i = \frac{x_i - \mu_i}{\sigma_i} \) \]</span></p>
-<p>mean :</p>
-<p><span class="math display">\[ \( v_i = \frac{\sigma_i}{\mu_i} \) \]</span></p>
-<ol start="3" type="1">
-<li>SENTIMENT ANALYSIS FOR MARKET PREDICTIONS</li>
-</ol>
-<p>Comprising sentiment analysis and keyword frequency time-series models, Twitter data is analyzed in tandem with graph mining techniques to determine salient communities impacting stock market trends.</p>
-<p><span class="math display">\[ y_t = \alpha + k \sum_{i=1}^{\beta_j} Y_{t-1} + k \sum_{j} \lambda_j X_{t-j} + \epsilon_t \]</span></p>
-<p>If the p-value is less than 0.05, we could reject the null hypothesis and conclude that variable X (sentiment) influences stock market changes and volatility. Granger’s test provides insights into how much predictive information one signal has about another one over a given lagged period. Here the p-value measures the statistical significance of the causality between two variables</p>
+<section id="preferred-programming-languages-for-the-project" class="level4">
+<h4 class="anchored" data-anchor-id="preferred-programming-languages-for-the-project">Preferred programming language(s) for the project</h4>
+<p>R – Core programming language for data processing, analysis, and modeling.</p>
+<p>tidyverse – Data wrangling and visualization.</p>
+<p>caret – Model training and evaluation.</p>
+<p>gplot2 – Data visualization.</p>
+<p>randomForest, xgboost – Machine learning algorithms.</p>
+<p>shiny – Interactive dashboards (if required).</p>
+<p>SQL – For querying and managing data sets.</p>
+<p>Python (if needed) – For additional ML modeling and integration</p>
 </section>
-<section id="example-data-visualisation-for-data-predicted-vs-target" class="level4">
-<h4 class="anchored" data-anchor-id="example-data-visualisation-for-data-predicted-vs-target">example data visualisation for data predicted vs target</h4>
-<p><img src="images/3.jpeg" class="img-fluid" width="600"></p>
+<section id="source-and-method-of-obtaining-your-dataset" class="level4">
+<h4 class="anchored" data-anchor-id="source-and-method-of-obtaining-your-dataset">Source and method of obtaining your dataset</h4>
+<p>Google scholar, Kaggle, twitter</p>
 </section>
-<section id="techniques-and-approaches" class="level4">
-<h4 class="anchored" data-anchor-id="techniques-and-approaches">TECHNIQUES AND APPROACHES</h4>
-<p>The approaches implemented in predictive analytics help begin to resolve various problems. Supervised learning helps to include historical dependencies in a pattern framework making them effective in the prediction of structured data. Stacking productionizes some of the individual biases and improves prediction performance by combining diverse algorithms. Bayesian inference reflects uncertainty, increasing model’s resilience to variations in distribution of data and unseen scenarios. Reinforcement learning provides adaptive pricing and real-time decision making suitable for automated trading and personalized recommendations. Sentiment analysis draws insights into public perception, augmenting traditional data-driven models. The integrative apply of these methodologies ensures a well-rounded and reflexive density of thought in which a proper equilibrium is created between accuracy, interpretability, and adaptability in vastly complex real-world crowds.</p>
-</section>
-</section>
-<section id="significance-of-the-work" class="level3">
-<h3 class="anchored" data-anchor-id="significance-of-the-work">SIGNIFICANCE OF THE WORK</h3>
-<section id="key-findings-and-contributions" class="level4">
-<h4 class="anchored" data-anchor-id="key-findings-and-contributions">KEY FINDINGS AND CONTRIBUTIONS</h4>
-<ul>
-<li>The study highlights the importance of ensemble learning in improving forecasting accuracy by combining multiple models to reduce variance and bias.</li>
-<li>It introduces Bayesian inference to quantify prediction uncertainty, providing robust probabilistic estimates for financial risk assessment and decision-making under uncertainty.</li>
-<li>Reinforcement learning is applied to dynamic pricing, showcasing AI-driven decision-making that adapts to market conditions and optimizes revenue in real time.</li>
-<li>The study also highlights the potential of social media data in financial forecasting, demonstrating how sentiment analysis and real-time trends can enhance predictive models.</li>
-<li>The study proposes a stacking model framework for flexible and scalable predictive modeling across various industries, ensuring interpretability of machine learning models and evaluating computational efficiency and scalability.</li>
-</ul>
-<p>These contributions advance predictive analytics by improving accuracy, reliability, and applicability across multiple domains.</p>
-</section>
-<section id="implications-and-broader-context" class="level4">
-<h4 class="anchored" data-anchor-id="implications-and-broader-context">IMPLICATIONS AND BROADER CONTEXT</h4>
-<p>The researchers argue that by integrating estimates of uncertainty into existing procedures for demand forecasting, firms can achieve reduced stock-holding costs and increased enhancements for risk models. A retailer may then adopt such price strategies as may be optimal based on an evaluation of real-time prevailing market conditions. Positive social media sentiment can augment predictions about the stock market. These models can help different governments understand economic trends and predict crises. Such an application could include resource allocation forecasting and risk mitigation within healthcare and supply chain sectors. Their paper highlights the importance of integrating diverse data sources into predictive models to enhance forecasting accuracy.</p>
-</section>
-</section>
-<section id="work-connections" class="level3">
-<h3 class="anchored" data-anchor-id="work-connections">WORK CONNECTIONS</h3>
-<section id="papaer-relevance-and-how-it-is-differ-from-previous-works" class="level4">
-<h4 class="anchored" data-anchor-id="papaer-relevance-and-how-it-is-differ-from-previous-works">PAPAER RELEVANCE AND HOW IT IS DIFFER FROM PREVIOUS WORKS</h4>
-<p>The study combines different research domains to augment predictive analytics. It combines Breiman’s Random Forests and Friedman’s Gradient Boosting Machines to improve model efficiency and robustness while responding to complicated datasets. It uses Bayesian regression techniques of Gelman and Kruschke to elicit uncertainty of the prediction intervals to achieve a more systematic thinking. Reinforcement learning techniques are used to learn optimal decision strategies in uncertain environments, such as pricing tactics. Sentiment analysis frameworks from the financial forecasting literature are employed to model the effect of market sentiment on financial forecasting. The study builds on these by extending the applicability of alternative data sources such as satellite imagery, transaction data, and signals from social media. This provides a more integrated and detailed perspective of predictive modeling that informs decisions across varying fields. It shows the flexibility and effectiveness of these methods in forecasting market trends and sentiment shifts. Overall, it is contributing towards the way forward in developmental predictive analytics and decision-making approaches.</p>
-</section>
-<section id="new-contributions" class="level4">
-<h4 class="anchored" data-anchor-id="new-contributions">NEW CONTRIBUTIONS</h4>
-<p>This research consolidates a variety of techniques of predictive analytics into an integrated framework complemented by Bayesian inference for ensemble learning, reinforcement learning for dynamic pricing, by integrating social media signals as predictive features, and by investigating hybrid modeling approaches. This offers a practical, flexible solution for various industries: healthcare analytics, climate modeling, and supply forecasting, thereby filling gaps in the existing literature.</p>
-</section>
-</section>
-<section id="my-project-relevance" class="level3">
-<h3 class="anchored" data-anchor-id="my-project-relevance">MY PROJECT RELEVANCE</h3>
-<p>The capstone project focuses on Machine Learning and Predictive Analytics, aiming to develop models to predict outcomes based on historical data. Techniques include</p>
-<p>Capstone project on machine learning and predictive analytics</p>
-<ul>
-<li>Stack methods for improving prediction accuracy;</li>
-<li>Quantify the uncertainty in predictions with Bayesian regression;</li>
-<li>Modify reinforcement learning algorithm for real-time predictive decision-making;</li>
-<li>Run sentiment analysis to improve the model.</li>
-</ul>
-<p>Application Areas: - Financial forecasting: Improvement in prediction accuracy; - Sales data: Policy based on pricing strategies; - Healthcare/Supply Chain Analytics: Improvement in forecasting accuracy; - Macroeconomic indicators: Sharper predictive insights.</p>
-<p>Future Work: - A deep exploration of Transformer-based architecture; - Explainable AI methods for improving model transparency; - Causal inference would be included to get insights into relationships between key predictive factors.</p>
-</section>
-<section id="references" class="level3">
-<h3 class="anchored" data-anchor-id="references">REFERENCES</h3>
-<ol type="1">
-<li>B. M. Pavlyshenko, “Machine-learning models for sales time series forecasting,” Data, vol.&nbsp;4, no. 1, p.&nbsp;15, 2019.</li>
-<li>B. M. Pavlyshenko, “Linear, machine learning and probabilistic approaches for time series analysis,” in 2016 IEEE First International Conference on Data Stream Mining &amp; Processing (DSMP), pp.&nbsp;377–381, IEEE, 2016. # https://arxiv.org/pdf/2205.12905</li>
-</ol>
-<section id="name-sathwika-bairi" class="level4">
-<h4 class="anchored" data-anchor-id="name-sathwika-bairi">NAME : SATHWIKA BAIRI</h4>
-</section>
+<section id="potential-references-tentative" class="level4">
+<h4 class="anchored" data-anchor-id="potential-references-tentative">Potential references (tentative)</h4>
+<p>Antons, D., &amp; Breidbach, C. F. (2018). Big data, big insights? Advancing service innovation and design with machine learning. Journal of Service Research, 21, 17–39. (https://doi.org/10.1177/1094670517738373)</p>
+<p>Mohana Chelvan, P., Perumal, K.: A Survey of Feature Selection Stability Mea-sures. International Journal of Computer and Information Technology 5, Article14 (2016), https://www.ijcit.com/archives/volume5/issue1/Paper050114.pdf.</p>
 </section>
 </section>
 
