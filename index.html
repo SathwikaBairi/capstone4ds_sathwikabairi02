@@ -34,6 +34,35 @@ ul.task-list li input[type="checkbox"] {
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -46,54 +75,105 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="capstone-project-proposal" class="level1">
-<h1>CAPSTONE PROJECT PROPOSAL</h1>
-<section id="names-of-your-teammates-if-any-or-specify-if-you-are-working-independently." class="level4">
-<h4 class="anchored" data-anchor-id="names-of-your-teammates-if-any-or-specify-if-you-are-working-independently.">Names of your teammates, if any, or specify if you are working independently.</h4>
-<p>Myself Sathwika Bairi, and my teammates are Srujan Bommena, Yashwanth krishna</p>
+<section id="machine-learning-and-predictive-analytics-in-health-care" class="level1">
+<h1>MACHINE LEARNING AND PREDICTIVE ANALYTICS IN HEALTH CARE</h1>
+<section id="a-data-driven-approach-to-disease-prediction" class="level3">
+<h3 class="anchored" data-anchor-id="a-data-driven-approach-to-disease-prediction">A DATA-DRIVEN APPROACH TO DISEASE PREDICTION</h3>
 </section>
-<section id="research-topic-you-will-focus-on-for-the-remainder-of-the-semester" class="level4">
-<h4 class="anchored" data-anchor-id="research-topic-you-will-focus-on-for-the-remainder-of-the-semester">Research topic you will focus on for the remainder of the semester</h4>
-<p>Machine Learning and Predictive Analytics: Developing models to predict outcomes based on historical data.</p>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of Contents</h2>
+<ol type="1">
+<li><a href="#introduction">Introduction</a><br>
+</li>
+<li><a href="#methodology">Methodology</a><br>
+</li>
+<li><a href="#data-collection">Data Collection</a><br>
+</li>
+<li><a href="#results-and-discussion">Results and Discussion</a><br>
+</li>
+<li><a href="#conclusion">Conclusion</a><br>
+</li>
+<li><a href="#references">References</a></li>
+</ol>
+<hr>
 </section>
-<section id="mathematicalstatistical-methods-you-plan-to-use-in-the-capstone" class="level4">
-<h4 class="anchored" data-anchor-id="mathematicalstatistical-methods-you-plan-to-use-in-the-capstone">Mathematical/Statistical methods you plan to use in the capstone</h4>
-<section id="regression-models" class="level5">
-<h5 class="anchored" data-anchor-id="regression-models">REGRESSION MODELS:</h5>
-<p>Linear Regression: Model relationships between dependent and independent variables.</p>
-<p>Multiple Regression: Extends linear regression with multiple independent variables.</p>
-<p>Logistic Regression: Used for binary classification problems (e.g., fraud detection).</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">INTRODUCTION</h2>
+<section id="defining-the-problem" class="level3">
+<h3 class="anchored" data-anchor-id="defining-the-problem">DEFINING THE PROBLEM</h3>
+<p>The growing patient data databases improve predictive models which allows developers to find diseases earlier when creating personalized treatments. Medical researchers deploy the Random Forest Classifier to evaluate historic healthcare data in order to identify diseases based on statistical probability. The goal involves employing machine learning methods to enhance diagnosis precision to let healthcare personnel execute early interventions and change treatment protocols.</p>
 </section>
-<section id="unsupervised" class="level5">
-<h5 class="anchored" data-anchor-id="unsupervised">UNSUPERVISED :</h5>
-<p>k-Means Clustering: Groups data into k clusters based on distance metrics.</p>
-<p>Principal Component Analysis (PCA): Dimensionality reduction technique using eigenvalues and eigen vectors.</p>
-<p>Auto-encoders: Deep learning models for feature extraction.</p>
-<p>PROBABILISTIC MODELS Bayesian Inference: Updates probabilities as new evidence is<br>
-introduced.</p>
-<p>Hidden Markov Models (HMM): Used in sequence prediction (e.g., speech recognition).</p>
-<p>Gaussian Mixture Models (GMM): Clustering approach based on probability distributions</p>
+<section id="context-and-background" class="level3">
+<h3 class="anchored" data-anchor-id="context-and-background">CONTEXT AND BACKGROUND</h3>
+<p>Healthcare predictive analytics requires different statistical and machine learning models for analyzing structured along with unstructured data. Doctors often achieve poor results when using logistic regression due to its inability to understand complex nonlinear patterns in medical data. Robotics systems play a crucial role in healthcare because the Random Forest Classifier shows strong capabilities when dealing with large medical datasets that have value imbalances.</p>
+<p>The healthcare prediction field benefits from using decision trees as well as support vector machines (SVMs) and neural networks according to previous research findings. Multiple trees combined through Random Forest outperform single decision trees since they work together to achieve more stable and accurate classifications according to Breiman (2001). The Random Forest algorithm will serve as the prediction model for assessing patient disease risk based on their medical data.</p>
+</section>
+<section id="objectives-and-goals" class="level3">
+<h3 class="anchored" data-anchor-id="objectives-and-goals">OBJECTIVES AND GOALS</h3>
+<p>For this project, we must be nearing to the goals we have set those are given as follows</p>
+<ul>
+<li>The implementation of Random Forest Classifier for disease prediction requires patient data processing.</li>
+<li>Compare model performance against baseline classifiers such as logistic regression.</li>
+<li>The model needs evaluation through accuracy measurement combined with precision rates and recall scores and AUC-ROC calculations.</li>
+<li>The analysis of feature importance allows us to determine which factors serve as the main predictors for disease diagnosis.</li>
+<li>Build functionality into the model which deals effectively with healthcare sector datasets that have an unbalanced distribution.</li>
+<li>Achieve better performance metrics with an improved computational speed.</li>
+<li>Create an easy-to-use system that enables healthcare staff to use machine learning analytic results in their work.</li>
+<li>Compare model performance against baseline classifiers such as logistic regression.</li>
+<li>The accuracy precision recall and AUC-ROC metrics will be used in a performance analysis of the model.</li>
+<li>Use feature importance to comprehend the major disease prediction factors.</li>
+</ul>
+</section>
+<section id="summary-of-approach" class="level3">
+<h3 class="anchored" data-anchor-id="summary-of-approach">SUMMARY OF APPROACH</h3>
+<section id="random-forest-classifier" class="level4">
+<h4 class="anchored" data-anchor-id="random-forest-classifier">Random forest classifier</h4>
+<p>The Random Forest model implementation in scikit-learn needs parameter adjustment enabled by the library to reach maximal performance levels.</p>
+</section>
+<section id="selecion-and-training" class="level4">
+<h4 class="anchored" data-anchor-id="selecion-and-training">Selecion and training</h4>
+<p>The evaluation of the model effectiveness depends on cross-validation analysis together with key performance indicators including accuracy as well as precision and recall and AUC-ROC.</p>
+</section>
+<section id="analysis" class="level4">
+<h4 class="anchored" data-anchor-id="analysis">Analysis</h4>
+<p>Embedding vital patient features related to prediction accuracy helps healthcare professionals better understand the analysis results.</p>
+</section>
+<section id="data-acquisition-and-preprocessing" class="level4">
+<h4 class="anchored" data-anchor-id="data-acquisition-and-preprocessing">Data acquisition and preprocessing</h4>
+<p>The first operational step requires dataset loading for subsequent healthcare data cleaning procedures which integrate feature engineering tasks.</p>
+</section>
+<section id="model-training" class="level4">
+<h4 class="anchored" data-anchor-id="model-training">Model training</h4>
+<p>Scikit-learn operates through the system to conduct Random Forest model training procedures.</p>
 </section>
 </section>
-<section id="preferred-programming-languages-for-the-project" class="level4">
-<h4 class="anchored" data-anchor-id="preferred-programming-languages-for-the-project">Preferred programming language(s) for the project</h4>
-<p>R – Core programming language for data processing, analysis, and modeling.</p>
-<p>tidyverse – Data wrangling and visualization.</p>
-<p>caret – Model training and evaluation.</p>
-<p>gplot2 – Data visualization.</p>
-<p>randomForest, xgboost – Machine learning algorithms.</p>
-<p>shiny – Interactive dashboards (if required).</p>
-<p>SQL – For querying and managing data sets.</p>
-<p>Python (if needed) – For additional ML modeling and integration</p>
 </section>
-<section id="source-and-method-of-obtaining-your-dataset" class="level4">
-<h4 class="anchored" data-anchor-id="source-and-method-of-obtaining-your-dataset">Source and method of obtaining your dataset</h4>
-<p>Google scholar, Kaggle, twitter</p>
+<section id="methodology" class="level2">
+<h2 class="anchored" data-anchor-id="methodology">METHODOLOGY</h2>
+<section id="data-acquisition-and-sources" class="level3">
+<h3 class="anchored" data-anchor-id="data-acquisition-and-sources">DATA ACQUISITION AND SOURCES</h3>
+<p>An ensemble learning method called Random Forest Classifier consists of multiple decision trees in its structure. The model performs prediction on outcome by collecting decision tree predictions from multiple trees that use features .</p>
+<p><span class="math display">\[
+\
+\hat{y} = \frac{1}{T} \sum_{t=1}^{T} h_t(x)
+\
+\]</span></p>
+<p>The ensemble consists of trees denoted by within a total of trees. The split criterion depends on Gini Impurity which defines as:</p>
+<p><span class="math display">\[
+Gini = 1 - \sum_{i=1}^{n} p_i^2
+\]</span></p>
+<p>The formula for calculating Gini impurity includes the proportion of class in a node represented by Pi and C the total number of classes.</p>
 </section>
-<section id="potential-references-tentative" class="level4">
-<h4 class="anchored" data-anchor-id="potential-references-tentative">Potential references (tentative)</h4>
-<p>Antons, D., &amp; Breidbach, C. F. (2018). Big data, big insights? Advancing service innovation and design with machine learning. Journal of Service Research, 21, 17–39. (https://doi.org/10.1177/1094670517738373)</p>
-<p>Mohana Chelvan, P., Perumal, K.: A Survey of Feature Selection Stability Mea-sures. International Journal of Computer and Information Technology 5, Article14 (2016), https://www.ijcit.com/archives/volume5/issue1/Paper050114.pdf.</p>
+<section id="analytical-procedrues" class="level3">
+<h3 class="anchored" data-anchor-id="analytical-procedrues">ANALYTICAL PROCEDRUES</h3>
+<p>A sequential guide explains how the Random Forest model should be trained along with its evaluation process:</p>
+<ol type="1">
+<li>The program retrieves the dataset by reading the CSV file.</li>
+<li>The data needs preprocessing to handle missing values, conduct categorical variable encoding and normalize all numerical features.</li>
+<li>The dataset requires division into training segments comprising 80% of the data while the remaining 20% constitutes the testing portion.</li>
+<li>Employ the RandomForestClassifier from scikit-learn to process the training of the Random Forest model.</li>
+</ol>
+</section>
 </section>
 </section>
 
