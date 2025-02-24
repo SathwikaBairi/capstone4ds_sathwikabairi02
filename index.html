@@ -75,22 +75,39 @@ window.Quarto = {
 
 
 
-<section id="machine-learning-and-predictive-analytics-in-health-care" class="level1">
-<h1>MACHINE LEARNING AND PREDICTIVE ANALYTICS IN HEALTH CARE</h1>
+<section id="machine-learning-and-predictive-analyatics-in-health-care" class="level1">
+<h1>MACHINE LEARNING AND PREDICTIVE ANALYATICS IN HEALTH CARE</h1>
 <section id="a-data-driven-approach-to-disease-prediction" class="level3">
 <h3 class="anchored" data-anchor-id="a-data-driven-approach-to-disease-prediction">A DATA-DRIVEN APPROACH TO DISEASE PREDICTION</h3>
 </section>
 <section id="table-of-contents" class="level2">
 <h2 class="anchored" data-anchor-id="table-of-contents">Table of Contents</h2>
 <ol type="1">
-<li><a href="#introduction">Introduction</a><br>
+<li><a href="#introduction">Introduction</a>
+<ul>
+<li><a href="#Defining-the-problem">Defining the problem</a><br>
 </li>
-<li><a href="#methodology">Methodology</a><br>
+<li><a href="#context-and-background">Context and Background</a><br>
 </li>
-<li><a href="#data-collection">Data Collection</a><br>
+<li><a href="#objectives-and-goals">Objectives and Goals</a><br>
 </li>
-<li><a href="#results-and-discussion">Results and Discussion</a><br>
+<li><a href="#summary-of-approach">Summary of Approach</a><br>
 </li>
+</ul></li>
+<li><a href="#methods">Methods</a>
+<ul>
+<li><a href="#data-acquisition-and-sources">Data Acquisition and Sources</a><br>
+</li>
+<li><a href="#mathematical-and-statistical-models">Mathematical and Statistical Models</a><br>
+</li>
+<li><a href="#experimental-design-and-analytical-procedures">Experimental Design and Analytical Procedures</a><br>
+</li>
+<li><a href="#software-and-tools">Software and Tools</a><br>
+</li>
+<li><a href="#ethical-considerations">Ethical Considerations</a></li>
+</ul></li>
+<li><a href="Procedures">Procedures</a></li>
+<li><a href="#results-and-discussion">Results and Discussion</a></li>
 <li><a href="#conclusion">Conclusion</a><br>
 </li>
 <li><a href="#references">References</a></li>
@@ -152,6 +169,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="methodology">METHODOLOGY</h2>
 <section id="data-acquisition-and-sources" class="level3">
 <h3 class="anchored" data-anchor-id="data-acquisition-and-sources">DATA ACQUISITION AND SOURCES</h3>
+<p>The “Disease Symptoms and Patient Profile Dataset” originates from Kaggle and features structured information about demographic data as well as symptoms together with diagnosed diseases. The dataset originated from healthcare records which have undergone anonymization and combined with symptom assessment reports. The preprocessing operations start with dealing with missing data elements followed by encoding categorial attributes and performing scale normalization on numerical features to enhance both consistency and model prediction accuracy.</p>
 <p>An ensemble learning method called Random Forest Classifier consists of multiple decision trees in its structure. The model performs prediction on outcome by collecting decision tree predictions from multiple trees that use features .</p>
 <p><span class="math display">\[
 \
@@ -167,13 +185,74 @@ Gini = 1 - \sum_{i=1}^{n} p_i^2
 <section id="analytical-procedrues" class="level3">
 <h3 class="anchored" data-anchor-id="analytical-procedrues">ANALYTICAL PROCEDRUES</h3>
 <p>A sequential guide explains how the Random Forest model should be trained along with its evaluation process:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/CP.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+</figure>
+</div>
 <ol type="1">
 <li>The program retrieves the dataset by reading the CSV file.</li>
 <li>The data needs preprocessing to handle missing values, conduct categorical variable encoding and normalize all numerical features.</li>
 <li>The dataset requires division into training segments comprising 80% of the data while the remaining 20% constitutes the testing portion.</li>
-<li>Employ the RandomForestClassifier from scikit-learn to process the training of the Random Forest model.</li>
+<li><strong>RandomForestClassification</strong> The model gets implemented through <code>scikit-learn</code> tools while completing hyperparameter optimization for better results.
+<ul>
+<li>Important predictors can be determined through the application of <code>feature_importances_</code>.</li>
+<li>we have to plot sensitivity versus specificity through Receiver Operating Characteristic curve plotting.</li>
+<li>We need to create data visualisation through the classifier in <code>seaborn</code></li>
+</ul></li>
+<li>Evaluation metrics</li>
 </ol>
+<ul>
+<li>Accuracy : the proportions of correct predictions</li>
+</ul>
+<p><span class="math display">\[
+Accuracy = \frac{TP+TN}{TP+TN+FP+FN}
+\]</span></p>
+<ul>
+<li>Precision : The ration of true to total predictions</li>
+</ul>
+<p><span class="math display">\[
+Precision = \frac{TP}{TP+FP}
+\]</span></p>
+<ul>
+<li>Recall : The ability of model to identify the predictions</li>
+</ul>
+<p><span class="math display">\[
+Recall = \frac{TP}{TP+FN}
+\]</span></p>
+<p>TP : True Positives</p>
+<p>TN : True Negatives</p>
+<p>FP : False Positives</p>
+<p>FN : False Negatives</p>
 </section>
+<section id="softwares-and-tools" class="level3">
+<h3 class="anchored" data-anchor-id="softwares-and-tools">SOFTWARES AND TOOLS</h3>
+<p>The platform I used is Python together with its library components:</p>
+<ul>
+<li><code>Pandas</code> for data manipulation.</li>
+<li>The implementation of <code>Random forest classifier</code> happens through scikit-learn framework.</li>
+<li><code>Matplotlib</code> and <code>Seaborn</code> for data visualization.</li>
+<li><code>Numpy</code> is used for numerical computations and arrays handling.</li>
+<li><code>Google Colab</code> is used for cloud based computations and handling the code exeutions without GPU/CPU.</li>
+</ul>
+</section>
+</section>
+<section id="procedures" class="level2">
+<h2 class="anchored" data-anchor-id="procedures">PROCEDURES</h2>
+<p><strong>STEP-1</strong> We need to install the necessary libraries</p>
+<pre><code>import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt</code></pre>
+<p><strong>STEP-2</strong> Installing <code>scikit-learn</code> for data splitting, Scaling, Modeling and Evaluation</p>
+<pre><code>from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import classification_report, confusion_matrix, roc_auc_score, roc_curve</code></pre>
+<p><strong>STEP-3</strong> Loading CSV file into the data frame</p>
+<pre><code>data = pd.read_csv("/content/Disease_symptom_and_patient_profile_dataset.csv")</code></pre>
+<pre><code>data.info()
+data.head(5)
+data.shape</code></pre>
 </section>
 </section>
 
