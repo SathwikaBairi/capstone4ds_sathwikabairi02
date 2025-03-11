@@ -97,7 +97,7 @@ The formula for calculating Gini impurity includes the proportion of class in a 
 
 A sequential guide explains how the Random Forest model should be trained along with its evaluation process:
 
-![Blank diagram](https://github.com/user-attachments/assets/b60a6a6f-bd6b-4d01-869d-5ead42775e95)
+![](images/1.6.jpg)
 
 1.  The program retrieves the dataset by reading the CSV file.
 2.  The data needs preprocessing to handle missing values, conduct categorical variable encoding and normalize all numerical features.
@@ -177,7 +177,7 @@ data.head(5)
 data.shape
 ```
 
-![](images/1-1){fig-align="center"}
+![](images/1.1.jpeg)
 
 **STEP-4 DATA CLEANING AND ENCODING** Now after data skimming and trimming we need to categorize the variables in the dataset.
 
@@ -214,7 +214,7 @@ print('Confusion Matrix:\n', conf_matrix)
 print('Classification Report:\n', class_report)
 ```
 
-![](images/1-2){fig-align="center"}
+![](images/1.2.jpeg){fig-align="center"}
 
 **STEP-7** **DATA VISUALISATION**
 
@@ -232,7 +232,7 @@ plt.show()
 
 **VISUALISATION FOR THE FEATURE IMPORTANCE**
 
-![](images/1-3){fig-align="center"}
+![](images/1.3.jpeg)
 
 ####  B.Confusion matrix Heatmap
 
@@ -247,7 +247,7 @@ plt.show()
 
 **CONFUSION MATRIX - ACTUAL VS PREDICTED**
 
-![](images/1-4){fig-align="center"}
+![](images/1.4.jpeg)
 
 Now based on the data given and predictions taken from the dataset, now we make model to predict the diseases bsed on the symptoms we input to it
 
@@ -275,6 +275,8 @@ if __name__ == "__main__":
     predict_disease()
 ```
 
-**MODEL INPUTS** ![image](https://github.com/user-attachments/assets/ecbcf980-922f-45c9-aa86-70a0b4dfec16)
+**MODEL INPUTS**
+
+![](images/1.5.jpeg)
 
 ## RESULTS AND DISCUSSIONS

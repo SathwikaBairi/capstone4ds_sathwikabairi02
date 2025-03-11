@@ -185,12 +185,7 @@ Gini = 1 - \sum_{i=1}^{n} p_i^2
 <section id="analytical-procedrues" class="level3">
 <h3 class="anchored" data-anchor-id="analytical-procedrues">ANALYTICAL PROCEDRUES</h3>
 <p>A sequential guide explains how the Random Forest model should be trained along with its evaluation process:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://github.com/user-attachments/assets/b60a6a6f-bd6b-4d01-869d-5ead42775e95.png" class="img-fluid figure-img"></p>
-<figcaption>Blank diagram</figcaption>
-</figure>
-</div>
+<p><img src="images/1.6.jpg" class="img-fluid"></p>
 <ol type="1">
 <li>The program retrieves the dataset by reading the CSV file.</li>
 <li>The data needs preprocessing to handle missing values, conduct categorical variable encoding and normalize all numerical features.</li>
@@ -255,11 +250,7 @@ from sklearn.metrics import classification_report, confusion_matrix, roc_auc_sco
 <pre><code>data.info()
 data.head(5)
 data.shape</code></pre>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
+<p><img src="images/1.1.jpeg" class="img-fluid"></p>
 <p><strong>STEP-4 DATA CLEANING AND ENCODING</strong> Now after data skimming and trimming we need to categorize the variables in the dataset.</p>
 <pre><code>label_encoders = {}
 for col in df.columns:
@@ -285,7 +276,7 @@ print('Confusion Matrix:\n', conf_matrix)
 print('Classification Report:\n', class_report)</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/1-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/1.2.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <p><strong>STEP-7</strong> <strong>DATA VISUALISATION</strong></p>
@@ -299,11 +290,7 @@ plt.ylabel('Features')
 plt.title('Feature Importance in Random Forest')
 plt.show()</code></pre>
 <p><strong>VISUALISATION FOR THE FEATURE IMPORTANCE</strong></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/1-3.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
+<p><img src="images/1.3.jpeg" class="img-fluid"></p>
 <p>####&nbsp; B.Confusion matrix Heatmap</p>
 <pre><code>plt.figure(figsize=(6, 4))
 sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=label_encoders['Outcome Variable'].classes_, yticklabels=label_encoders['Outcome Variable'].classes_)
@@ -312,11 +299,7 @@ plt.ylabel('Actual')
 plt.title('Confusion Matrix')
 plt.show()</code></pre>
 <p><strong>CONFUSION MATRIX - ACTUAL VS PREDICTED</strong></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/1-4.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
+<p><img src="images/1.4.jpeg" class="img-fluid"></p>
 <p>Now based on the data given and predictions taken from the dataset, now we make model to predict the diseases bsed on the symptoms we input to it</p>
 <p><strong>STEP-8</strong> <strong>DISEASE PREDICTION</strong></p>
 <pre><code>def predict_disease():
@@ -338,7 +321,8 @@ plt.show()</code></pre>
 
 if __name__ == "__main__":
     predict_disease()</code></pre>
-<p><strong>MODEL INPUTS</strong> <img src="https://github.com/user-attachments/assets/ecbcf980-922f-45c9-aa86-70a0b4dfec16.png" class="img-fluid" alt="image"></p>
+<p><strong>MODEL INPUTS</strong></p>
+<p><img src="images/1.5.jpeg" class="img-fluid"></p>
 </section>
 </section>
 <section id="results-and-discussions" class="level2">
