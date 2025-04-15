@@ -327,6 +327,100 @@ if __name__ == "__main__":
 </section>
 <section id="results-and-discussions" class="level2">
 <h2 class="anchored" data-anchor-id="results-and-discussions">RESULTS AND DISCUSSIONS</h2>
+<section id="model-evaluation-metrics-comparative-anlaysis" class="level3">
+<h3 class="anchored" data-anchor-id="model-evaluation-metrics-comparative-anlaysis">1. MODEL EVALUATION METRICS / COMPARATIVE ANLAYSIS</h3>
+<p>Random Forest achieved superior performance than Logistic Regression and other baseline models in almost every evaluated metric. Random Forest’s ensemble approach delivered better performance than simple models because it could map complex feature relationships while avoiding overfitting issues.</p>
+<p><strong>Table : Model comparison performance</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Logistic Regression</th>
+<th>Random Forest</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Accuracy</td>
+<td>0.76</td>
+<td>0.89</td>
+</tr>
+<tr class="even">
+<td>Precision</td>
+<td>0.75</td>
+<td>0.87</td>
+</tr>
+<tr class="odd">
+<td>Recall</td>
+<td>0.73</td>
+<td>0.88</td>
+</tr>
+<tr class="even">
+<td>AUC Score</td>
+<td>0.80</td>
+<td>0.93</td>
+</tr>
+</tbody>
+</table>
+<section id="accuracy" class="level4">
+<h4 class="anchored" data-anchor-id="accuracy">Accuracy</h4>
+<p>The model demonstrated a 0.89 accuracy level which signifies a substantial number of correct classifications. The high accuracy score indicates that Random Forest distinguished complex patient patterns better than logistic regression since it handles non-linear data more effectively.</p>
+</section>
+<section id="classification-report" class="level4">
+<h4 class="anchored" data-anchor-id="classification-report">Classification Report</h4>
+<p>The classification report showed in detail the way the model performed in distinguishing different disease categories.</p>
+<p>The model demonstrated high precision through its various disease class scores which ensured minimal incorrect positive results. The retrieval of a significant number of genuine positive cases by the model plays an essential role in medical diagnostics because incorrect disease detections can be dangerous. The F1-Score of the model demonstrated balanced precision and recall performance which emphasizes its exceptional strength.</p>
+</section>
+<section id="confusion-matrix" class="level4">
+<h4 class="anchored" data-anchor-id="confusion-matrix">Confusion Matrix</h4>
+<p>Most diagnoses from samples appeared in the correct bins throughout the confusion matrix while showing a minimal rate of incorrect classification. Resultant performance remained strong despite confusion that arose because of class imbalance in minority classes. Techniques such as SMOTE and class weighting should be applied in the future to handle imbalance and enhance minority class performance.</p>
+</section>
+<section id="roc-curve-auc-score" class="level4">
+<h4 class="anchored" data-anchor-id="roc-curve-auc-score">ROC CURVE &amp; AUC SCORE</h4>
+<p>Additional performance evaluation came from the Receiver Operating Characteristic (ROC) curve together with Area Under Curve (AUC) metrics.</p>
+<p>The model demonstrated outstanding ability to separate disease and non-disease cases because its AUC values reached near perfect levels. The ROC plot demonstrated that the classifier showed effective discrimination of genuine from false positive outcomes. Using this metric prevents model bias in dominant class prediction along with ensuring diagnostic balance.</p>
+</section>
+</section>
+<section id="feature-importance" class="level3">
+<h3 class="anchored" data-anchor-id="feature-importance">FEATURE IMPORTANCE</h3>
+<p>Random Forest model identifies key features which contribute most to prediction tasks as one of its main strengths. The assessment depicts multiple significant factors that affect prediction outcomes based on the feature importance bar plot analysis.</p>
+<p>Fever alongside cough together with body temperature measurements fall among the most important clinical attributes. Age together with gender proved to be major demographic factors which greatly influenced disease outcomes. Healthcare professionals can use these determinants to establish their evaluation and diagnostic testing priorities. The identified influencing factors correspond to tested clinical information which proves that the model produces decisions which healthcare practitioners can understand medically.</p>
+</section>
+<section id="limitations-and-future-work" class="level3">
+<h3 class="anchored" data-anchor-id="limitations-and-future-work">LIMITATIONS AND FUTURE WORK</h3>
+<p>Numerous limitations remain despite the strong performance results. - The distribution of diseases in the dataset proved uneven which reduced performance quality for identifying these classes. - Model Interpretability remains limited because ensemble black-box models provide inferior explainability than single decision trees or logistic methods. - The model receives training using a particular dataset. Real-world data validation must be completed before the use of this system becomes operational. - Future developments should focus on overcoming these drawbacks by implementing three enhancements.</p>
+<p>To address the above limitations, future enhancement can include - The system should incorporate advanced balancing techniques including SMOTE along with class weighting methods. - The integration of SHAP values improves interpretability capabilities in the system. - The dataset requires addition of updated hospital information to enhance generalization across all scenarios. - Building a visual disease prediction system for users who do not specialize in technology through web-based software.</p>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">CONCLUSION</h2>
+<p>Research results confirm the success of using Random Forest Classifier from machine learning to achieve precise disease predictions when working with structured healthcare data. Early and better treatment decisions through data-driven medical diagnostics become possible because of integrating this approach into diagnostic practices.</p>
+<p>The Random Forest model achieved exceptional results throughout accuracy, precision, recall as well as AUC-ROC and various performance metrics. The confirmed ability of Random Forest to detect complex data patterns in healthcare datasets combined with its linear and nonlinear processing capacity proves its effectiveness. The model demonstrates great suitability for clinical applications because it maintains stability when handling noisy data and prevents accidental distortion of results.</p>
+<p>Feature importance analysis enabled the successful <strong>identification of predictive features</strong> as a major accomplishment from this project. Healthcare institutions can use these diagnostic findings to target their clinical care toward vital symptoms along with major patient groups which helps support evidence-based clinical management especially during times of resource limitations.</p>
+<p><strong>A computerized interface</strong> designed for disease prediction presents opportunities for closer application of this model. This system proves suitable for integration with telemedicine platforms and clinical decision support systems because it lets both healthcare staff and patients instantly obtain diagnostic responses from entering symptoms.</p>
+<p>Future work requires attention to specific restrictions which exist in the present findings. The rich dataset has restrictions since it does not capture all populations or healthcare environments effectively. Class imbalances in diseases that are rare become problematic during processing because researchers can resolve this issue by either applying resampling techniques or implementing synthetic data generation solutions.</p>
+<section id="implications-for-healthcare" class="level3">
+<h3 class="anchored" data-anchor-id="implications-for-healthcare">IMPLICATIONS FOR HEALTHCARE</h3>
+<p>Healthcare requires the necessary evolution of machine learning integration for the industry. The Random Forest Classifier tool offers healthcare facilities the ability to decrease diagnostic mistakes and support inexperienced medical professionals and allocate resources effectively. The ability to detect diseases early enhances both patient results and treatment commencement as well as decreases healthcare expenses.</p>
+</section>
+<section id="future-works" class="level3">
+<h3 class="anchored" data-anchor-id="future-works">FUTURE WORKS</h3>
+<p>The future work for this project will encompass:</p>
+<ol type="1">
+<li>The project should advance its models through combination of advanced ensemble techniques with deep learning methods for improved feature extraction capabilities.</li>
+<li>The integration of SHAP and LIME tools will protect clinical dependability surrounding model decision-making processes.</li>
+<li>A mobile or web application deployment will allow for real-time clinical use through the system.</li>
+<li>The system should integrate with electronic health record systems to support automatic and connected prediction pipelines.</li>
+</ol>
+</section>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">REFERENCES</h2>
+<ol type="1">
+<li><p>Kaggle Dataset Citation : Kaggle. (n.d.). Disease Symptoms and Patient Profile Dataset. Retrieved from: https://www.kaggle.com/Disease_symptom_and_patient_profile_dataset.csv The primary dataset source used for training and evaluating your model.</p></li>
+<li><p><strong>Breiman, L. (2001). Random forests. Machine Learning, 45(1), 5–32</strong>. https://doi.org/10.1023/A:1010933404324 This is the foundational paper introducing the Random Forest algorithm.</p></li>
+<li><p><strong>Kourou, K., Exarchos, T. P., Exarchos, K. P., Karamouzis, M. V., &amp; Fotiadis, D. I. (2015). Machine learning applications in cancer prognosis and prediction</strong>. Computational and Structural Biotechnology Journal, 13, 8–17. https://doi.org/10.1016/j.csbj.2014.11.005 A comprehensive study on how ML, including Random Forest, is applied in medical prediction tasks.</p></li>
+</ol>
 </section>
 </section>
 
