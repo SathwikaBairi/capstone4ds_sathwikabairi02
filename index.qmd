@@ -274,7 +274,9 @@ if __name__ == "__main__":
 
 **Figure 4 : ROC CURVE FOR DIFFERENT MODELS**
 
-![](images/ROC.png){fig-align="center"}
+![](images/roc.jpeg){fig-align="center"}
+
+The AUC (Area Under the Curve) is 0.85, meaning your model does a very good job (where 1.0 is perfect and 0.5 is random guessing).
 
 ### 1. MODEL EVALUATION METRICS / COMPARATIVE ANLAYSIS
 
