@@ -75,11 +75,22 @@ window.Quarto = {
 
 
 
-<section id="machine-learning-and-predictive-analyatics-in-health-care" class="level1">
-<h1>MACHINE LEARNING AND PREDICTIVE ANALYATICS IN HEALTH CARE</h1>
-<section id="a-data-driven-approach-to-disease-prediction" class="level3">
-<h3 class="anchored" data-anchor-id="a-data-driven-approach-to-disease-prediction">A DATA-DRIVEN APPROACH TO DISEASE PREDICTION</h3>
-</section>
+<!-- Title Page -->
+<div style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+<h1>
+MACHINE LEARNING AND PREDICTIVE ANALYTICS IN HEALTH CARE
+</h1>
+<h2 class="anchored">
+A DATA-DRIVEN APPROACH TO DISEASE PREDICTION
+</h2><h2 class="anchored">
+<p>
+Sathwika Bairi
+</p>
+<p>
+April 29, 2025
+</p>
+</h2></div>
+<!-- Force a page break -->
 <section id="table-of-contents" class="level2">
 <h2 class="anchored" data-anchor-id="table-of-contents">Table of Contents</h2>
 <ol type="1">
@@ -214,15 +225,8 @@ Recall = \frac{TP}{TP+FN}
 <section id="procedures" class="level2">
 <h2 class="anchored" data-anchor-id="procedures">PROCEDURES</h2>
 <p><strong>STEP-1</strong> We need to install the necessary libraries</p>
-<pre><code>import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt</code></pre>
 <p><strong>STEP-2 IMPORT SCIKIT-LEARN TOOLS</strong></p>
 <p>Installing <code>scikit-learn</code> for data splitting, Scaling, Modeling and Evaluation</p>
-<pre><code>from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import classification_report, confusion_matrix, roc_auc_score, roc_curve</code></pre>
 <p><strong>STEP-3 LOADING THE DATASET</strong></p>
 <pre><code>data = pd.read_csv("/content/Disease_symptom_and_patient_profile_dataset.csv")</code></pre>
 <pre><code>data.info()
@@ -352,7 +356,7 @@ if __name__ == "__main__":
 </table>
 <section id="accuracy" class="level4">
 <h4 class="anchored" data-anchor-id="accuracy">1.1 Accuracy</h4>
-<p>The model demonstrated a 0.89 accuracy level which signifies a substantial number of correct classifications. The high accuracy score indicates that Random Forest distinguished complex patient patterns better than logistic regression since it handles non-linear data more effectively.</p>
+<p>The model demonstrated a 0.84 accuracy level which signifies a substantial number of correct classifications. The high accuracy score indicates that Random Forest distinguished complex patient patterns better than logistic regression since it handles non-linear data more effectively.</p>
 </section>
 <section id="classification-report" class="level4">
 <h4 class="anchored" data-anchor-id="classification-report">1.2 Classification Report</h4>
@@ -411,9 +415,9 @@ if __name__ == "__main__":
 <li><p><strong>Kourou, K., Exarchos, T. P., Exarchos, K. P., Karamouzis, M. V., &amp; Fotiadis, D. I. (2015). Machine learning applications in cancer prognosis and prediction</strong>. Computational and Structural Biotechnology Journal, 13, 8–17. https://doi.org/10.1016/j.csbj.2014.11.005 A comprehensive study on how ML, including Random Forest, is applied in medical prediction tasks.</p></li>
 </ol>
 </section>
-</section>
+</main></div>
 
-</main>
+
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -835,7 +839,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-</div> <!-- /content -->
+ <!-- /content -->
 
 
 

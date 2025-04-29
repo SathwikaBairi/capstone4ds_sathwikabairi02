@@ -1,6 +1,12 @@
-# MACHINE LEARNING AND PREDICTIVE ANALYATICS IN HEALTH CARE
-
-### A DATA-DRIVEN APPROACH TO DISEASE PREDICTION
+<!-- Title Page -->
+<div style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+  <h1>MACHINE LEARNING AND PREDICTIVE ANALYTICS IN HEALTH CARE
+</h1>
+  <h2> A DATA-DRIVEN APPROACH TO DISEASE PREDICTION<h2>
+  <p>Sathwika Bairi</p>
+  <p>April 29, 2025</p>
+</div>
+<!-- Force a page break -->
 
 ## Table of Contents
 
@@ -137,24 +143,12 @@ The platform I used is Python together with its library components:
 
 ## PROCEDURES
 
-**STEP-1** We need to install the necessary libraries
-
-```         
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-```
+**STEP-1** 
+We need to install the necessary libraries
 
 **STEP-2 IMPORT SCIKIT-LEARN TOOLS**
 
 Installing `scikit-learn` for data splitting, Scaling, Modeling and Evaluation
-
-```         
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import classification_report, confusion_matrix, roc_auc_score, roc_curve
-```
 
 **STEP-3 LOADING THE DATASET**
 
@@ -292,7 +286,7 @@ Random Forest achieved superior performance than Logistic Regression and other b
 
 #### 1.1 Accuracy
 
-The model demonstrated a 0.89 accuracy level which signifies a substantial number of correct classifications. The high accuracy score indicates that Random Forest distinguished complex patient patterns better than logistic regression since it handles non-linear data more effectively.
+The model demonstrated a 0.84 accuracy level which signifies a substantial number of correct classifications. The high accuracy score indicates that Random Forest distinguished complex patient patterns better than logistic regression since it handles non-linear data more effectively.
 
 #### 1.2 Classification Report
 
